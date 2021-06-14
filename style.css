@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 35rem;
+  height: 50rem;
+  background: url(/images/signup.png);
+  background-position: inherit;
+  background-size: cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+  z-index: 9999;
+  border-radius: 10px;
+}
+.sub > :nth-child(odd) {
+  margin: 2rem;
+}
+.header > h1 {
+  color: white;
+  font-size: 3rem;
+}
+.hr {
+  width: 5rem;
+  height: 0.3rem;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  background-color: none;
+  border-bottom: 2px solid #48dbfb;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+}
+.path1 {
+  position: absolute;
+  width: 10rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  clip-path: polygon(99% 1%, 0% 100%, 100% 100%);
+  bottom: 0;
+  right: 0;
+  animation: ali 3s infinite ease-in-out alternate-reverse;
+}
+.path2 {
+  position: absolute;
+  width: 15rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  clip-path: polygon(99% 1%, 0% 100%, 100% 100%);
+  bottom: 0;
+  right: 0;
+  animation: hifzan 2.5s infinite ease-in-out alternate-reverse;
+}
+.path3 {
+  position: absolute;
+  width: 20rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  clip-path: polygon(99% 1%, 0% 100%, 100% 100%);
+  bottom: 0;
+  right: 0;
+  animation: bhatti 2s infinite ease-in-out alternate-reverse;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  position: relative;
+  background-color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+.btn::after {
+  content: "";
+  width: 20rem;
+  height: 10rem;
+  background-color: #f368e0;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-radius: 50%;
+  transition: all 1s linear;
+}
+.btn:hover::after {
+  transform: translate(100%, -50%);
+}
+@keyframes ali {
+  100% {
+    width: 150rem;
+    height: 150rem;
+  }
+  0% {
+    width: 10rem;
+    height: 20rem;
+  }
+}
+@keyframes hifzan {
+  100% {
+    width: 150rem;
+    height: 150rem;
+  }
+  0% {
+    width: 15rem;
+    height: 25rem;
+  }
+}
+@keyframes bhatti {
+  100% {
+    width: 150rem;
+    height: 150rem;
+  }
+  0% {
+    width: 20rem;
+    height: 30rem;
+  }
+}
+.para {
+  position: absolute;
+}
+.login {
+  position: relative;
+  z-index: 99999;
+}
+@media (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 280px) {
+  .sub {
+    width: 25rem;
+  }
+}
